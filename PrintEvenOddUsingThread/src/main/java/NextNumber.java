@@ -1,24 +1,22 @@
 public class NextNumber {
 
     int val=0;
-    boolean evenValue = false;
+
     public synchronized int getEvenValue() throws InterruptedException{
-         while(!evenValue){
+         while(val%2 ==0){
              wait();
          }
          val++;
-         evenValue = false;
          notify();
          return val;
     }
 
     public synchronized int getOddValue() throws InterruptedException{
 
-        while(evenValue ){
+        while(val%2 ==1 ){
             wait();
         }
         val++;
-        evenValue = true;
         notify();
         return val;
     }
