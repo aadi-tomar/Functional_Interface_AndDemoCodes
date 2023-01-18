@@ -68,6 +68,11 @@ public class ReflectionApiMain {
             }
 
         }
+        Method method = c2.getMethod("getEmpDepartment");
+        Class[] classes = method.getExceptionTypes();
+        for(Class c : classes){
+            System.out.println(c.getName());
+        }
 
 
     }

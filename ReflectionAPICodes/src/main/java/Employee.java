@@ -35,7 +35,7 @@ public class Employee implements Cloneable, Serializable {
         this.empName = empName;
     }
 
-    public String getEmpDepartment() {
+    public String getEmpDepartment() throws IllegalStateException, ArrayIndexOutOfBoundsException{
         return empDepartment;
     }
 
