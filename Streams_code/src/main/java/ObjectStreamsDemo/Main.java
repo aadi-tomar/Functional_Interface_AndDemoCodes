@@ -30,6 +30,10 @@ public class Main {
 
         groupByGender.forEach((k, v) -> System.out.println(k + " " + v));
 
+
+
+
+
     }
 
     private static List< Person> getPeople(){
