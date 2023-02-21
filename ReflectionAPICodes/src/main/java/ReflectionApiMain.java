@@ -8,9 +8,10 @@ public class ReflectionApiMain {
         //Three ways to get the class info
         //Class c = Class.forName(String.valueOf(Employee.class));
         Class c1 = Class.forName("Employee");
+        //2nd type
         Employee e = new Employee();
         Class c2 = e.getClass();
-
+        // 3rd type
         Class c3 = Employee.class;
 
         //MetaData about the class.
@@ -53,9 +54,6 @@ public class ReflectionApiMain {
             //System.out.println("Field value " +f.get(f));
             //f.getType();
         }
-
-
-        //Methods Information
         System.out.println();
         System.out.println("Methods information using the reflection APIs");
 
