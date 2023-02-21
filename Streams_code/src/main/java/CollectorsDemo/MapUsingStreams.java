@@ -1,10 +1,7 @@
 package CollectorsDemo;
 
 import java.io.Serializable;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.TreeMap;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class MapUsingStreams {
@@ -68,6 +65,10 @@ public class MapUsingStreams {
 
         Map<Integer, List<String>> groupByLength = stringList.stream().collect(Collectors.groupingBy(s -> s.length()));
         System.out.println(groupByLength);
+
+        //count, min, max, avg, sum ->you can also do it invidually
+        IntSummaryStatistics summaryStatistics = stringList.stream().mapToInt(s -> s.length()).summaryStatistics();
+        System.out.println(summaryStatistics);
 
     }
 }
